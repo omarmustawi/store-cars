@@ -1,8 +1,8 @@
-import { Commentat } from "@/utlities/interface";
+import { CommentType } from "@/utlities/interface";
 import React from "react";
 import { IoPersonSharp } from "react-icons/io5";
 
-export default function Comment({ comment }: { comment: Commentat }) {
+export default function Comment({ comment }: { comment: CommentType }) {
   return (
     <div className="comment">
         <IoPersonSharp size={30} />
