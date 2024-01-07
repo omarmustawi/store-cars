@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply overflow-x-hidden;
   }
-}
+  .rounded-input {
+    @apply bg-gray-200/50 rounded-lg p-1 px-5 outline-none text-slate-600 h-12;
+  }
+  .product {
+    @apply rounded-md shadow-xl min-w-60 max-w-96 overflow-hidden h-fit;
+  }
+  .btn-filter {
+    @apply focus:border-fuchsia-400 cursor-pointer hover:bg-slate-200 text-gray-700 border-2 bg-gray-100 py-1 px-5;
+  }
+  .btn {
+    @apply bg-fuchsia-400 hover:bg-fuchsia-400/50 text-white py-1 px-5 rounded-md m-auto flex;
+  }
+  .comment {
+    @apply rounded-xl flex gap-4 items-center border-2 my-3 px-5 py-2 w-fit min-w-96  bg-zinc-600 text-white;
+  }
+  .nav-item::after {
+    @apply content-[attr(after)] absolute left-0 -bottom-1 w-full h-[calc(2px)] bg-fuchsia-800 scale-x-0  ease-in-out origin-left duration-700;
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .nav-item:hover:after {
+    @apply group-hover:scale-x-100;
+  }
 }
