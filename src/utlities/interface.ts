@@ -18,6 +18,7 @@ export interface CommentType {
 export interface User {
   id: number;
   email: string;
+  name: string;
 }
 export interface Order {
   id: number;
