@@ -66,7 +66,7 @@ const ProductPage: React.FC<ProductPageProps> = () => {
       const response = await axios.post(
         `${api_root}/rate`,
         {
-          product_id: productDetail.id,
+          product_id: productDetail?.id,
           rate: hoveredRating,
         },
         {
