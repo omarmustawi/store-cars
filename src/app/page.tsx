@@ -6,6 +6,7 @@ import wave from "@/images/wave-blue.png";
 import points from "@/images/points.webp";
 
 export default function Home() {
+  
   return (
       <div>
         <div className="relative p-11 bg-color-2 -z-10">
