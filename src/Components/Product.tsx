@@ -56,8 +56,8 @@ export default function Product({ product }: { product: ProductData }) {
         <Link href={`/products/${product.id}`}>
           <Image
             className="rounded-t-xl hover:scale-125 transition-transform delay- ease-linear"
-            src={product.image}
-            alt={product.title}
+            src={product?.image}
+            alt={product?.title}
             width={500}
             height={500}
           />
